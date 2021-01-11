@@ -136,7 +136,15 @@ body {
   .mynav ul {
     position: absolute;
     right: 0;
-    top: 5px; }
+    top: 5px; 
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .mynav h3,  .mynav ul{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
   .mynav h3,
   .mynav ul,
   .mynav li {
@@ -190,8 +198,9 @@ body {
   background-color: #fdfdfe;
   padding-bottom: 20px; }
   @media (min-width: 577px) {
-    .header {
-      padding-top: 20px; } }
+    .header {padding-top: 20px; } 
+  }
+
   @media (max-width: 576px) {
     .header {
       padding-top: 40px; } }
@@ -212,8 +221,15 @@ body {
     @media (min-width: 576px) and (max-width: 768px) {
       .header .info {
         text-align: center; }
+
         .header .info p:first-of-type {
-          width: 100% !important; } }
+          width: 100% !important; }
+          .header .info p:last-of-type{
+           margin: auto }
+        
+        }
+
+
     .header .info p:first-of-type {
       background-color: #e2eaed;
       border-radius: 40px;
@@ -262,13 +278,22 @@ body {
       .header .info a {
         display: inline-block;
         text-align: center;
-        margin-top: 10px; } }
+       
+        margin-top: 10px;
+        margin-right: auto;
+        margin-left: auto;
+         display: block; 
+      
+      } }
+
+        
   .header .phone {
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: right;
-    opacity: 0; }
+  
+   }
     @media (max-width: 576px) {
       .header .phone {
         margin-top: 0; } }
@@ -876,6 +901,7 @@ body {
   .testimonial .arrows {
     color: #f1f1f1;
     position: absolute;
+    user-select: none;
     right: 0;
     -webkit-transform: translateX(-50%) translateY(-100%);
     -o-transform: translateX(-50%) translateY(-100%);
@@ -921,10 +947,10 @@ body {
     margin-left: auto;
     position: relative;
     cursor: pointer;
-    -webkit-transition: 1s all ease-in-out;
-    -o-transition: 1s all ease-in-out;
-    -moz-transition: 1s all ease-in-out;
-    transition: 1s all ease-in-out; }
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    transition: 0.3s all ease-in-out; }
     @media (max-width: 576px) {
       .faq .question > div {
         max-width: 100%; } }
