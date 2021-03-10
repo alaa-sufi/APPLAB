@@ -713,50 +713,73 @@ body {
 .awesome p {
   margin-right: auto;
   margin-left: auto; }
-.awesome .toggleswitch {
-  justify-content: center;
+ 
+.custom-toggle {
+  user-select: none;
+  width: 360px;
+  height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.custom-toggle label {
+  border: 1px solid #dedede;
+  width: 360px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: white;
+  cursor: pointer;
+  display: block;
+}
+.custom-toggle label:active:after {
+  width: 210px;
+}
+.custom-toggle label:after {
+  width: 162px;
+  height: 48px;
+  background-color: #2602fb;
+  content: "";
+  position: absolute;
+  border-radius: 60px;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+  margin: 6px;
+}
+.custom-toggle label .text {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  border: 2px solid #e2eaed;
-  min-width: max-content;
-  padding: 3px;
-  border-radius: 25px; }
-  .awesome .toggleswitch .btnt {
-    border: 3px solid #1a1a1a;
-    display: inline-block;
-    padding: 10px;
-    position: relative;
-    text-align: center;
-    transition: all 600ms ease, color 600ms ease;
-    border-radius: 25px; }
-  .awesome .toggleswitch input {
-    display: none; }
-    .awesome .toggleswitch input + label {
-      cursor: pointer;
-      min-width: 60px; }
-      .awesome .toggleswitch input + label:after {
-        background: #1a1a1a;
-        content: "";
-        height: 100%;
-        position: absolute;
-        top: 0;
-        transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
-        width: 100%;
-        z-index: -1; }
-    .awesome .toggleswitch input.toggle-left + label {
-      border-right: 0; }
-      .awesome .toggleswitch input.toggle-left + label:after {
-        left: 100%; }
-    .awesome .toggleswitch input.toggle-right + label {
-      margin-left: -5px; }
-      .awesome .toggleswitch input.toggle-right + label:after {
-        left: -100%; }
-    .awesome .toggleswitch input:checked + label {
-      cursor: default;
-      color: #fff;
-      transition: color 200ms; }
-      .awesome .toggleswitch input:checked + label:after {
-        left: 0; }
-@media (max-width: 576px) {
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  position: relative;
+  z-index: 999;
+}
+.custom-toggle label .text span {
+  text-align: center;
+}
+.custom-toggle label .text .on {
+  color: white;
+}
+.custom-toggle label .text .off {
+  color: grey;
+}
+.custom-toggle input {
+  display: none;
+}
+.custom-toggle input:checked + label:after {
+  left: unset;
+  right: 6px;
+  transform: translateX(6px);
+}
+.custom-toggle input:checked + label .off {
+  color: white;
+}
+.custom-toggle input:checked + label .on {
+  color: grey;
+}
+  @media (max-width: 576px) {
   .awesome .cards .card1 {
     margin: auto;
     margin-bottom: 30px; } }
